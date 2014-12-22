@@ -17,7 +17,9 @@
         return nil;
     
     self.autoplayVideos = NO;
-
+    self.panToDismiss = YES;
+    self.showIndexTitle = YES;
+    
     self.preferredStatusBarStyleMH = UIStatusBarStyleDefault;
     self.presentationStyle = presentationStyle;
     self.transitionCustomization = MHTransitionCustomization.new;

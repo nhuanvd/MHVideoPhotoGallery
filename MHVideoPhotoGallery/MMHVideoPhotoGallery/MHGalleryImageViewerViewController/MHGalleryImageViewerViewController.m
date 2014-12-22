@@ -338,8 +338,13 @@
 }
 
 -(void)updateTitleForIndex:(NSInteger)pageIndex{
-    NSString *localizedString  = MHGalleryLocalizedString(@"imagedetail.title.current");
-    self.navigationItem.title = [NSString stringWithFormat:localizedString,@(pageIndex+1),@(self.numberOfGalleryItems)];
+    if ([self galleryViewController].showIndexTitle) {
+        NSString *localizedString  = MHGalleryLocalizedString(@"imagedetail.title.current");
+        self.navigationItem.title = [NSString stringWithFormat:localizedString,@(pageIndex+1),@(self.numberOfGalleryItems)];
+    }
+    else {
+        self.navigationItem.title = @"";
+    }
 }
 
 
@@ -638,7 +643,9 @@
 }
 
 -(void)userDidPan:(UIPanGestureRecognizer*)recognizer{
-    
+    if (!self.viewController.galleryViewController.panToDismiss) {
+        return;
+    }
     BOOL userScrolls = self.viewController.userScrolls;
     if (self.viewController.transitionCustomization.dismissWithScrollGestureOnFirstAndLastImage) {
         if (!self.interactiveTransition) {
