@@ -17,7 +17,7 @@ Weblinks (.mov, .mp4, .mpv)
 ```
 ##Supported Languages
 ```ruby
-DE,EN,ES,FR,HR,IT
+DE,EN,ES,FR,HR,IT,PT,RU
 ```
 ##MHGalleryItem 
 ```objective-c
@@ -146,4 +146,8 @@ Support this project via gittip.
 </a>
 
 	
+
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mariohahn/mhvideophotogallery/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
